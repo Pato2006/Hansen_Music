@@ -1,0 +1,108 @@
+.recuadro {
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+}
+
+.recuadro.active {
+    visibility: visible;
+    background-color: #1C1C3D;
+    height: 100vh;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 5px;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.imagen {
+    flex: 1;
+    max-width: 50%;
+    margin-top: 25px;
+}
+
+.producto {
+    text-align: left;
+}
+
+.nombre {
+    font-size: 17px;
+    color: white;
+    padding-left: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.precio {
+    font-size: 16px;
+    color: white;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    background-color: #323232;
+}
+
+.boton-x {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.boton-x::before,
+.boton-x::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.boton-x::before {
+    transform: rotate(45deg);
+}
+
+.boton-x::after {
+    transform: rotate(-45deg);
+}
+
+.subtotal {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin-top: 25px;
+    border-top: 2.5px solid #2A2954;
+    border-bottom: 2.5px solid #2A2954;
+    margin: 25px 20px 0px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.boton2 {
+    display: flex;
+    justify-content: center;
+}
+
+.put {
+    color: rgb(231, 221, 221);
+    background-color: #2A2954;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    left: 1134px;
+    top: 495px;
+    margin-top: 50px;
+    border: none;
+}

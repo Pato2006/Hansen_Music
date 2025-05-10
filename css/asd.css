@@ -1,0 +1,122 @@
+/* Responsive SUBIR PRODUCTO*/
+@media (max-width: 1200px) {
+    .subir-producto {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin: 0;
+    }
+
+
+    .subir-imagen {
+        margin-top: 20px;
+        grid-area: 1 / 2 / 9 / 6;
+        width: 500px;
+        height: 500px;
+        margin-left: 10px;
+        background-color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subir-imagen-input{
+        grid-area: 7 / 2 / 8 / 10;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+
+    .subir-titulo {
+        grid-area: 8 / 2 / 8 / 10;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .subir-descripcion {
+        grid-area: 9 / 2 / 9 / 10;
+        margin-left: 20px;
+    }
+
+    .subir-filtros {
+        grid-area: 10 / 2 / 10 / 10;
+        margin-left: 20px;
+        display: flex;
+    }
+
+    .subir-ubicacion {
+        grid-area: 11 / 2 / 11 / 10;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .subir-envio {
+        grid-area: 12 / 2 / 12 / 10;
+        margin-left: 20px;
+    }
+
+    .subir-precio {
+        grid-area: 13 / 2 / 13 / 10;
+        margin-left: 20px;
+    }
+
+    .subir-boton {
+        grid-area: 14 / 2 / 14 / 10;
+        margin-left: 20px;
+        margin-bottom: 40px;
+        width: 20%;
+    }
+    .eliminar-imagen{
+        grid-area: 7 / 2 / 7 / 10;
+        margin-top: 20px;
+        margin-left: 60px;
+
+    }
+    .subir-boton button {
+        border-radius: 200px;
+        background-color: #1C1C3D;
+        border: #1C1C3D;
+        color: white;
+    }
+
+    .subir-boton button:hover {
+        color: white;
+    }
+}
+
+/* Navbar */
+@media (max-width: 1400px) {
+    .navbar_hasen {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .navbar_hasen_logo {
+        width: 400px;
+        height: auto;
+        display: flex;
+
+    }
+
+    .navbar_busqueda {
+        width: 500px;
+        height: auto;
+        margin-left: 50px;
+    }
+
+    .navbar_items_venta {
+        width: auto;
+        height: auto;
+        margin-left: -100px;
+    }
+
+    .navbar_items_perfil {
+        margin-left: 6px;
+    }
+
+    .navbar_items_carrito {
+        margin-left: 6px;
+    }
+}

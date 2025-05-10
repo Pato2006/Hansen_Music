@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/asd.css">
+    <link rel="shortcut icon" href="img-svg/guitarra.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./imgs/guitarra.svg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/cesese.css">
+    <script src="js/script.js"></script>
+    <script src="js/perfil.js"></script>
+    <script src="js/busqueda.js"></script>
+    <title>Hansen Music</title>
+</head>
+
+<body>
+    <header id="cabecera">
+        <div id="contactos">
+            <ul>
+                <li class="item"><a href="#contacto">Contacto</a></li>
+                <li class="item"><a href="#nosotros">Acerca de Nosotros</a></li>
+                <li class="item"><a href="#preg_frec">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand pe-4" href="index.php">
+                <svg class="" width="400" height="64" src="">
+                    <image xlink:href="img-svg/HansenLogoHorizontal.svg" width="100%" height="100%" />
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="50" fill="currentColor"
+                    class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form id="buscador" class="d-flex pe-2 text-center ms-4" role="search" method="post"
+                    action="producto.html">
+                    <div class="row">
+                        <div class="col-4 d-flex align-items-center flex-grow-1">
+                            <input name="texto_buscar" id="buscador" class="form-control form-control-lg me-2"
+                                type="search" placeholder="Que estas buscando?" aria-label="Search">
+                            <button class="btn btn-outline btn-lg" type="button" id="busqueda">
+                                <img src="img-svg/search.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-pills d-flex flex-wrap text-center">
+                    <li class="nav-item"><a href="subir-producto.html" class="nav-link active" aria-current="page">Vende
+                            tu producto</a></li>
+                    <li class=""><a href="login.html" class="nav-link ms-3"></a></li>
+                    <div class="boton_solution">
+                    <div class="nav-item dropdown">
+                        
+                        <button id="menuDropdown" class="btn   dropdown-toggle nav-item" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img-svg/person.svg" alt="">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <li class="nav-item" id="buy"><a href="#" class="nav-link ms-3 "><img src="img-svg/car.svg"
+                                alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="fondo-perfil">
+        <section class="perfil-fondo">
+            <div class="perfil-foto">
+                <img src="img-svg/person.svg" alt="" id="imagen_usuario">
+            </div>
+            <div class="perfil-informacion">
+                <label class="perfil" id="perfil"></label>
+                <label class="descripcion" id="correo"></label>
+                <label class="descripcion" id="reputacion"></label>
+            </div>
+        </section>
+        <label class="envio_label" id="envio"></label>
+        <a href="perfil-modificar.html"><button type="button" class="btn btn-lg ms-5">Modificar informacion</button></a>
+        <div class="perfil-envio">
+            <label class="envio_label">Guitarra Roja (usada)</label>
+        </div>
+        <section class="estado">
+            <div class="envio-estado-1">
+                <label for="envio">Despachado</label>
+            </div>
+            <div class="separador-1"></div>
+            <div class="envio-estado-2">
+                <label for="envio">En envio</label>
+            </div>
+            <div class="separador-2">
+            </div>
+            <div class="envio-estado-3">
+                <label for="envio">Entregado</label>
+            </div>
+        </section>
+        <section class="ventas">
+            <div class="instrumentos">
+                <div class="separacion"></div>
+                <label for="" class="p-1">Tus productos</label>
+                <div class="instrumentos-propios">
+                    <button class="instrumentos-fotos">
+                        <span>
+                            <img src="img-svg/default.svg" alt="">
+                        </span>
+                        <div class="descripcion-productos">
+                            <h3>Guitarra</h3>
+                            <h3>$160.000</h3>
+                        </div>
+                    </button>
+                    <button class="instrumentos-fotos">
+                        <span>
+                            <img src="img-svg/default.svg" alt="">
+                        </span>
+                        <div class="descripcion-productos">
+                            <h3>Piano</h3>
+                            <h3>$199.000</h3>
+                        </div>
+                    </button>
+                    <button class="instrumentos-fotos">
+                        <span>
+                            <img src="img-svg/default.svg" alt="">
+                        </span>
+                        <div class="descripcion-productos">
+                            <h3>Bajo</h3>
+                            <h3>$160.000</h3>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer">
+        <footer>
+            <div>
+                <ul>
+                    <li>hasenmusic@yahoo.com.ar</li>
+                    <li>Compañia dedicada a la venta de instrumentos</li>
+                    <li>2023</li>
+                </ul>
+            </div>
+        </footer>
+    </div> 
+    <div class="recuadro">
+        <div class="contenedor">
+            <div class="boton-x" id="close"></div>
+            <img class="imagen"
+                src="data:image/jpeg;base64,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"
+                alt="Imagen">
+            <div class="producto">
+                <p class="nombre">Guitarra </p>
+                <p class="precio">Precio: $99.99</p>
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <img class="imagen"
+                src="https://tiendafeedback.com.ar/14551-large_default/bateria-pearl-roadshow-4-cuerpos-jet-black-fierros-platillos.jpg"
+                alt="Imagen">
+            <div class="producto">
+                <p class="nombre">Bateria Pearl</p>
+                <p class="precio">Precio: $99.99</p>
+            </div>
+        </div>
+
+        <div class="subtotal">
+            <br class="br">
+            <p class="mt-3"> Subtotal 198.99</p>
+            <br class="br">
+        </div>
+
+        <div class="boton2">
+            <button class="put"><strong>Comprar</strong></button>
+        </div>
+    </div>
+</body>
+
+</html>

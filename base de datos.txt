@@ -1,0 +1,40 @@
+usuarios
+---------
+
+id
+Nombre
+Contraseña (MD5)
+* insert into contraseña md5(contraseña) *
+para comparar, se encripta lo q pones con la q hay 
+
+registrarse
+-----------
+
+id automatico
+nombre
+contraseña MD5
+
+
+usuarios_informacion
+---------------------
+
+id
+correo
+nombre_compañia
+reputacion
+envio
+
+
+
+productos
+-----------
+id 
+nombre
+precio	
+marca
+estado
+orientacion
+entrega
+ubicacion PUEDE SER NULL
+precio
+propietario ID DEL MISMO 

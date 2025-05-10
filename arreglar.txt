@@ -1,0 +1,29 @@
+SUBIR PRODUCTO:
+cuando subis producto, se guarde en la otra base de datos la info
+guardar foto 
+
+
+PRODUCTOS:
+ver para que se redireccioone todo a productos.html
+los filtros
+
+
+MIRAR PRODUCTOS:
+recibir el que se esta mirando y mostrarlo en pantalla
+
+
+REGISTRARSE
+verificar email, que tenga @, subirlo a la base de datos
+
+COMPRA
+verificar que los datos ingresados en la compra del producto son correctos,
+
+
+PERFIL
+ver estado de tus compras, ver los productos que pusiste a la venta
+
+corregir para que se puedan subir archivos si estas logeado, no poder registrarte a lo loco o subir archivos, verificar que esten archivos en los campos.
+
+
+
+crear el .gitignore

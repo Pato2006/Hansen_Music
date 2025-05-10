@@ -1,0 +1,46 @@
+Indice unico al correo y usuario, asi no hay un nombre y un correo repetido
+TODOS LOS ID tienen que ser primario y tiene que estar primero
+Si el nombre de la tabla ya hace referencia, no es necesario ponerlo
+
+TABLA = usuarios
+ID = id_usuaros 
+
+No usar ñ ni acentos, es decir caracteres especiales "`/etc. siempre singular en las columnas
+Usar siempre _ o -    no alternar entre estos
+Evitar repeticiones, Ejemplo 
+NO se puede guardar el Nro de tarjeta o la fecha de expiracion
+
+Agregar pago APROBADO, RECHAZADO
+
+
+
+
+DB Hansen Music
+✔Sacar valoracion
+*Tabla Compañia nueva con foreign key en USUARIOS
+*Eliminar ñ
+*Crear tabla Publicaciones
+*Tabla envio y relacionar a Usuarios
+*Tabla estado y relacionar a Publicaciones
+✔Poner ID adelante del vendedor
+*Descripcion en tabla 
+
+Publicaciones
+ID_Vendedor
+ID_producto
+Precio
+Comentarios(Si nos da el tiempo)
+
+Productos
+Modelo
+Marca
+Nombre
+Orientacion
+Pais de origen (Puede ser)
+
+*El menu tiene que ser dinamico
+*Campos obligatorios registrarse, que tengas que poner datos para registrarte
+*Nombre de Usuario NO tiene que tener @
+*Invertir Nombre de Usuario / Correo electronico
+*No funciona el login-registro
+

@@ -1,0 +1,54 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: calc(100% - 100px);; 
+    height: 400px;
+    background-color: #1C1C3D;
+    overflow: hidden;
+    margin: 0 auto; 
+-webkit-box-shadow: -7px 8px 50px 15px rgba(0,0,0,1);
+-moz-box-shadow: -7px 8px 50px 15px rgba(0,0,0,1);
+box-shadow: -7px 8px 50px 15px rgba(0,0,0,1);
+}
+
+.animated-image {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 300%;
+    animation: slide 10s linear infinite;
+}
+
+.animated-image img {
+    padding-left: 30px;
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+@keyframes slide {
+    0%, 100% {
+        left: 10px;
+    }
+    50% {
+        left: -200%;
+    }
+}
+
+.animated-image img:nth-child(3n + 1),
+.animated-image img:nth-child(3n + 2),
+.animated-image img:nth-child(3n + 3) {
+    animation: sombrita 4s infinite;
+}
+
+@keyframes sombrita {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

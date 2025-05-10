@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasen Music</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/asd.css">
+    <link rel="shortcut icon" href="img-svg/guitarra.svg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/cesese.css">
+    <script src="js/script.js"></script>
+    <script src="js/busqueda.js"></script>
+</head>
+<body>
+    <header id="cabecera">
+        <div id="contactos">
+            <ul>
+                <li class="item"><a href="#contaccc">Contacto</a></li>
+                <li class="item"><a href="#nosotros">Acerca de Nosotros</a></li>
+                <li class="item"><a href="#preg_frec">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand pe-4" href="index.php">
+                <svg class="" width="400" height="64" src="">
+                    <image xlink:href="imagenes/svg/HansenLogoHorizontal.svg" width="100%" height="100%" />
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="50" fill="currentColor"
+                    class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form id="buscador" class="d-flex pe-2 text-center ms-4" role="search" method="post" action="producto.html">
+                    <div class="row">
+                        <div class="col-4 d-flex align-items-center flex-grow-1">
+                            <input name="texto_buscar" id="buscador" class="form-control form-control-lg me-2" type="search"
+                                placeholder="Que estas buscando?" aria-label="Search">
+                            <button class="btn btn-outline btn-lg" type="button" id="busqueda">
+                                <img src="imagenes/svg/search.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-pills d-flex flex-wrap text-center">
+                    <li class="nav-item"><a href="subir-producto.html" class="nav-link active" aria-current="page">Vende
+                            tu producto</a></li>
+                    <li class=""><a href="login.html" class="nav-link ms-3"></a></li>
+                    <div class="boton_solution">
+                    <div class="nav-item dropdown">
+                        
+                        <button id="menuDropdown" class="btn   dropdown-toggle nav-item" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="imagenes/svg/person.svg" alt="">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="fondo-model">
+        <div class="container">
+            <div class="fondo-contenidomodel d-flex align-items-start justify-content-center">
+                <form action="" method="POST" id="form_subir">
+                    <section class="subir-productomodel">
+                        <div class="subir-titulo">
+                            <div class="mb-3 align-items-center">
+                                <section class="rounded">
+                                    <input type="text" class="modelbusq"
+                                        placeholder="Nombre de modelo" id="nombre_producto" name="nombre">
+                                </section>
+                            </div>
+                        </div>
+                        <div class="subir-filtrosmodel mb-5 me-auto">
+                            <div class="input-group">
+                                <button id="marcaDropdown" class="btnmo dropdown-toggle"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">Marca</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('marca', 'Epiphone')">Epiphone</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('marca', 'Martin')">Martin</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('marca', 'Gibson')">Gibson</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('marca', 'Taylor')">Taylor</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('marca', 'Otro')">Otro</a></li>
+                                </ul>
+                                <input type="hidden" name="marca_selec" id="marca_seleccionado" value="Marca">
+                            </div>
+                            <div class="input-group">
+                                <button id="orientacionDropdown" class="btnmo dropdown-toggle"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">Orientación</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('orientacion', 'Zurdo')">Zurdo</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('orientacion', 'Diestro')">Diestro</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="seleccionarOpcion('orientacion', 'Ambidiestro')">Ambidiestro</a></li>
+                                </ul>
+                                <input type="hidden" name="orientacion_selec" id="orientacion_seleccionado" value="Orientación">
+                            </div>
+                        <div class="subir-envio">
+                        </div>
+                        </div>
+                        <div class="inputmodel" id="otroCampo" style="display: none;">
+                            <input type="text" class="inpumode" placeholder="Especificar otra marca" id="otroInput" name="otra_marca">
+                        </div>
+                        <div class="subir-botonmodel d-flex-normal justify-content-center align-items-center">
+                            <button class="btn w-100 h-100" type="submit" id="subir_prod">Subir</button>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </main>
+        </div>
+    </div>
+    <script>
+        function seleccionarOpcion(campo, valor) {
+            $("#" + campo + "_seleccionado").val(valor);
+            $("#" + campo + "Dropdown").text(valor);
+    
+            if (campo === 'marca') {
+                if (valor === 'Otro') {
+                    $("#otroCampo").show();
+                } else {
+                    $("#otroCampo").hide();
+                    $("#otroInput").val('');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
