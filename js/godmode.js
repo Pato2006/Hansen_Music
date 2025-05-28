@@ -7,21 +7,17 @@ $(document).ready(function () {
         success: function (data) {
             console.log(data.roles);
             if (data.roles == 2) {
+                // Nada por ahora
             }
             else if (data.roles == 1) {
-                // Verificamos si el contenedor tiene display: none
                 if ($('#contenedor').css('display') === 'none') {
-                    // Cambiar display a block
                     $('#contenedor').css('display', 'block');
                 }
 
-                // Verificamos nuevamente si el contenedor tiene display: none
                 if ($('#contenedor').css('display') === 'block') {
                     var str = `
         <main class="products">
-            <!-- Contenedor grid para las tarjetas -->
             <div class="tarjetas-container">
-                <!-- Primera tarjeta con SVG de alerta -->
                 <a href="#" class="articulos">
                     <div class="contenido tarjeta-blanca">
                         <div class="foto">
@@ -34,7 +30,7 @@ $(document).ready(function () {
                             <p><strong>Publicado:</strong> 04/08/2024</p>
                             <p><strong>Usuario:</strong> skibidi_07</p>
                         </div>
-                        <div class="icono-svg">
+                        <div class="icono-svg" id="boton_reporte">
                             <img src="img-svg/santi2.svg" alt="alerta" style="width:50px; height: 50px;">
                         </div>
                     </div>
@@ -42,20 +38,25 @@ $(document).ready(function () {
             </div>
         </main>
         `;
-                    // Añadir el contenido al contenedor
                     $("#contenedor").html(str);
 
-                    // Ocultar el buscador y las items de navegación
                     $("#buscador").css('display', 'none');
                     $("#vende-btn").css("display", "none")
                     $("#busqueda").css("display", "none")
                     $("#navbar-zarpado").css("background-color", "gray");
+
+                    // Listener para el botón de reporte
+                    $("#boton_reporte").on("click", function () {
+                        $.ajax({
+                            url: "PHP/reportes.php",
+                        })
+
+                    });
                 }
             }
         },
         error: function (data) {
             console.log("Error: " + data.status + " " + data.statusText);
-
         }
-    })
+    });
 });
