@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-04-2025 a las 01:41:30
+-- Tiempo de generación: 29-05-2025 a las 01:47:03
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.0.30
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -151,6 +151,25 @@ INSERT INTO `publications` (`id`, `seller_id`, `product_id`, `name`, `descriptio
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `reports`
+--
+
+CREATE TABLE `reports` (
+  `id` int(11) NOT NULL,
+  `publication_id` int(11) NOT NULL,
+  `report_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `reports`
+--
+
+INSERT INTO `reports` (`id`, `publication_id`, `report_date`) VALUES
+(6, 13, '2025-05-29');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `roles`
 --
 
@@ -253,8 +272,9 @@ INSERT INTO `users` (`id`, `username`, `password`, `mail`, `location`, `surname`
 (1, 'Patricio2006', '$2y$10$ySouv9NGS6lsaTDmAqs6JuoWl.Z5vaUQlACfmsHCXDzAjqk9r3uEe', 'pato1@gmail.com', 'Av. Lacarra 3980', NULL, NULL, 2),
 (2, 'SantiRomeo', '$2y$10$/0SesuJ1GKtNdc1dhHYJduyXTK39uVxY8Yfs9033k3Pm5E0Mz46za', 'santi1@hotmail.com', 'Cap. García Cuerva 3950', NULL, NULL, 2),
 (3, 'Pato2006', '$2y$10$kpHVytoMw4dO2x5F6aZAGO/dTfTv4t6UnfKtnZqEajkeX47rCZdf6', 'Pato2006@gmail.com', NULL, NULL, NULL, 2),
-(8, 'asd', '$2y$10$TQFRiWLXY0ZFKI.phMsdVOobdNO.XKgcO8KWljEqw6no.37NP4nyu', 'asd@gmail.com', 'asd', 'asd', 'sd', 2),
-(9, 'Pato', '$2y$10$PNzP5U2rgDOEwzDN7pi4Cu7lLhTloI96aIFMPztgBYdiMt1ak6Utu', 'asd@gmail.com', NULL, 'Zarate', 'Patricio', 2);
+(8, 'asd', '$2y$10$TQFRiWLXY0ZFKI.phMsdVOobdNO.XKgcO8KWljEqw6no.37NP4nyu', 'asd@gmail.com', 'asd', 'asd', 'sd', 1),
+(9, 'Pato', '$2y$10$PNzP5U2rgDOEwzDN7pi4Cu7lLhTloI96aIFMPztgBYdiMt1ak6Utu', 'asd@gmail.com', NULL, 'Zarate', 'Patricio', 2),
+(10, 'asdfg', '$2y$10$38BButN9xqfVpb6Z/MM8X.CSMbsunVnoyrlrTEjCH2tSDMAlppsbq', 'asdfg@gmail.com', NULL, 'asdfg', 'asdfg', 2);
 
 -- --------------------------------------------------------
 
@@ -311,6 +331,13 @@ ALTER TABLE `publications`
   ADD KEY `FK_product_id` (`product_id`),
   ADD KEY `FK_send_id` (`send_id`),
   ADD KEY `FK_type_id` (`type_id`);
+
+--
+-- Indices de la tabla `reports`
+--
+ALTER TABLE `reports`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_reports_publications` (`publication_id`);
 
 --
 -- Indices de la tabla `roles`
@@ -386,6 +413,12 @@ ALTER TABLE `publications`
   MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT de la tabla `reports`
+--
+ALTER TABLE `reports`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
@@ -413,7 +446,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `wishlist`
@@ -448,6 +481,12 @@ ALTER TABLE `publications`
   ADD CONSTRAINT `FK_send_id` FOREIGN KEY (`send_id`) REFERENCES `sends` (`id`),
   ADD CONSTRAINT `FK_type_id` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`),
   ADD CONSTRAINT `publications_ibfk_1` FOREIGN KEY (`seller_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `reports`
+--
+ALTER TABLE `reports`
+  ADD CONSTRAINT `fk_reports_publications` FOREIGN KEY (`publication_id`) REFERENCES `publications` (`id`);
 
 --
 -- Filtros para la tabla `users`
